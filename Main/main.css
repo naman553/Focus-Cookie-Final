@@ -50,10 +50,12 @@ p {
     top: 350px;
     width: 100%;
     height: 100vh;
+    /* padding-bottom: 70px; */
     background-color: var(--white);
     color: rgba(255, 255, 255, 0);
     z-index: 1;
     text-align: center;
+    mix-blend-mode: none;
     font-size: 180px;
 }
 
@@ -146,7 +148,7 @@ p {
     transition: all 2s;
 }
 
-.main1 a {
+.main1 button {
     color: azure;
     font-size: 40px;
     width: 300px;
@@ -158,29 +160,38 @@ p {
     text-decoration: none;
     position: absolute;
 }
-a:hover{
+.GS:hover{
     transition: all 300ms ease-in;
     transform: translateY(-3px);
 }
-a:hover .BB{
+button:hover .BB{
     transition: all 300ms ease-in;
     box-shadow: 1px 6px 2px rgb(117, 116, 116);
 }
 .p1{
     color: white;
-    margin-left: 80px;
+    margin-left: 55px;
     justify-self: flex-start;
-    font-size: 30px;
-    width: 350px;
+    font-size: 70px;
+    font-weight: 800;
+    position: relative;
+    bottom: 100px;
+    /* background-color: rgb(0, 0, 0); */
+    border-radius: 20%;
+    /* padding-top: 20px; */
 }
 .p2{
     color: white;
-    margin-right: 80px;
+    margin-right: 100px;
+    /* background-color: rgb(0, 0, 0); */
+    /* border-radius: 20%; */
+    /* height: 270px; */
     position: relative;
-    bottom: 100px;
+    bottom: 180px;
     justify-self: flex-end;
-    font-size: 30px;
-    width: 300px;
+    font-size: 80px;
+    font-weight: 800;
+    /* width: 300px; */
 }
 .BB{
     background-color: white;
@@ -188,16 +199,19 @@ a:hover .BB{
     width: 295px;
     position: relative;
     justify-self: center;
-    top: 395px;
-    left: 2px;
+    top: 325px;
     border-radius: 55px;
     box-shadow: 1px 3px 2px rgb(117, 116, 116);
     z-index: -1;
 }
 
+.GS a{
+    font-size:40px ;
+    color: white;
+    text-decoration: none;
+}
 
-
-/* From Uiverse.io by Galahhad */ 
+/* From Uiverse.io by Galahhad  */
 .GS {
 --btn-default-bg: rgb(41, 41, 41);
 --btn-padding: 15px 20px;
@@ -220,9 +234,15 @@ a:hover .BB{
 
 .GS {
 box-sizing: border-box;
-padding: var(--btn-padding);
+/* padding: var(--btn-padding); */
 display: flex;
 align-items: center;
+margin-inline: auto;
+position: relative;
+top: 382px;
+height: 60px;
+width: 300px;
+border-radius:55px ;
 justify-content: center;
 color: var(--default-btn-color);
 font: var(--font-weight) var(--font-size) var(--font-family);
@@ -242,116 +262,14 @@ position: relative;
 background: inherit;
 }
 
-.GS span::before {
-box-sizing: border-box;
-position: absolute;
-content: "";
-background: inherit;
-}
-
 .GS:hover, .GS:focus {
 background: var(--btn-hover-bg);
 }
 
-.GS:hover span, .GS:focus span {
-color: var(--hover-btn-color);
+.changecolor{
+    color: #494848; 
+    transition: all 200ms ease-in 1s;
 }
-
-.GS:hover span::before, .GS:focus span::before {
-animation: chitchat linear both var(--btn-animation-duration);
-}
-
-@keyframes chitchat {
-0% {
-content: "#";
-}
-
-5% {
-content: ".";
-}
-
-10% {
-content: "^{";
-}
-
-15% {
-content: "-!";
-}
-
-20% {
-content: "#$_";
-}
-
-25% {
-content: "№:0";
-}
-
-30% {
-content: "#{+.";
-}
-
-35% {
-content: "@}-?";
-}
-
-40% {
-content: "?{4@%";
-}
-
-45% {
-content: "=.,^!";
-}
-
-50% {
-content: "?2@%";
-}
-
-55% {
-content: "\;1}]";
-}
-
-60% {
-content: "?{%:%";
-right: 0;
-}
-
-65% {
-content: "|{f[4";
-right: 0;
-}
-
-70% {
-content: "{4%0%";
-right: 0;
-}
-
-75% {
-content: "'1_0<";
-right: 0;
-}
-
-80% {
-content: "{0%";
-right: 0;
-}
-
-85% {
-content: "]>'";
-right: 0;
-}
-
-90% {
-content: "4";
-right: 0;
-}
-
-95% {
-content: "2";
-right: 0;
-}
-
-100% {
-content: "";
-right: 0;
-}
+#focus{
+    font-weight: 800;
 }

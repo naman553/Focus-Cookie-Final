@@ -3,8 +3,9 @@ let cookie = document.getElementById("cookie");
         let cookie3 = document.getElementById("cookie3");
         let text = document.getElementById("text");
 
-        let text2 = document.getElementById("cont1")
+        let text2 = document.getElementById("cont1");
 
+        let foc = document.getElementById("focus");
         // COOKIE FLOATS AWAY EFFECT 
         window.addEventListener("scroll",
             function () {
@@ -31,4 +32,5 @@ let cookie = document.getElementById("cookie");
         // TEXT FADE IN EFFECT
         window.addEventListener("scroll", function () {
             text2.classList.add('fadein');
+            foc.classList.add('changecolor');
         })
