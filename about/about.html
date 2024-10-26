@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cards</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background: url(/Focus-Cookie-Final/about/heyy.jpg);
+            object-fit: fill;
+            background-repeat: no-repeat;
+            background-size: cover;
+            overflow: hidden;
+        }
+
+        .container {
+            position: absolute;
+            top: 30vh;
+            left: 20vw;
+        }
+
+        .bg {
+            height: 123vh;
+            width: 100vw;
+            background: #000;
+            opacity: 0.6;
+            z-index: 1;
+        }
+
+        .card {
+            height: 200px;
+            aspect-ratio: 12/16;
+            margin: 2px;
+            transition: transform 1s ease-in-out, left 1s ease-in-out, top 1s ease-in-out;
+            box-shadow: inset 0 0 2000px rgba(255, 255, 255, .5);
+            border-radius: 12%;
+            opacity: 0.65;
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .card1,
+        .card2,
+        .card3,
+        .card4 {
+            background-color: rgb(231, 171, 81);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .card1 {
+            transform: rotate(-24deg);
+            left: -64px;
+            top: -24px;
+        }
+
+        .card2 {
+            transform: rotate(-6deg);
+            top: -214px;
+            left: -29px;
+        }
+
+        .card3 {
+            transform: rotate(15deg);
+            top: -390px;
+        }
+
+        .card4 {
+            transform: rotate(39deg);
+            top: -563px;
+            left: 32px;
+        }
+
+        /* Animation to rotate cards */
+        @keyframes cards {
+            0% {}
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        .card.animate {
+            animation: cards 2s linear 0.5s forwards;
+        }
+
+        /* After rearranging, we set this class for a horizontal row */
+        .row-layout {
+            position: relative;
+            left: 10vw !important;
+            top: 7vh !important;
+            transform: rotate(0deg) !important;
+            display: inline-block;
+          
+        }
+
+        .row-layout:hover {
+            transform: translateZ(50px);
+            perspective: 1000px;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .text {
+            background-color: burlywood;
+            opacity: 0.8;
+            box-shadow: inset 0 100px 2000px rgba(255, 255, 255, 0.5);
+            z-index: 2;
+            position: absolute;
+            top: 0vh;
+            left: 50vw;
+            backdrop-filter: blur(5px);
+            font-size: 36px;
+            padding-top: 250px;
+            padding-bottom: 100%;
+            text-align: center;
+            color: rgb(255, 255, 255);
+        }
+
+        .text.fade-out {
+            transform: translateX(60vw);
+            transition: transform 3s linear 1.5s;
+        }
+        
+        /* New styles for image and text after clicking the cards */
+        .card .image {
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            transition: all 1s ease-in-out;
+            position: absolute;
+            border-radius: 0%;
+        }
+        
+        /* Shrinking and moving the image to top left on click */
+        .card.clicked .image {
+            width: 50px;
+            height: 50px;
+            top: 10px;
+            left: 10px;
+            border-radius: 50%;
+            background-size: cover;
+            background-position: center;
+            transition: width 1.5s ease-in-out, height 1.5s ease-in-out, top 1.5s ease-in-out, left 1.5s ease-in-out, border-radius 1.5s ease-in-out;
+        }
+        
+        /* Fix for staying in the top left corner */
+        .card.clicked .image.fixed {
+            position: fixed; /* Fix the position to the entire screen */
+            top: 10px; /* Move it to top left */
+            left: 10px;
+            z-index: 9999; /* Ensure it's on top */
+        }
+        
+        .card.clicked {
+            background-color: burlywood;
+            scale: 3; /* Beige background when image disappears */
+            transition: scale 1s ease-in-out ;
+            z-index: 3;
+        }
+        
+        .card .card-text {
+            display: none;
+            opacity: 0;
+            position: absolute;
+            top: 70px;
+            left: 10px;
+            color: white;
+            font-size: 1rem;
+            transition: opacity 1s ease-in-out;
+        }
+
+        /* Show text when image disappears */
+        .card.clicked .card-text {
+            display: block;
+            opacity: 1;
+        }
+        .card:hover{
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bg">
+    </div>
+    <div class="container" id="cardContainer">
+        <div class="card card1">
+            <div class="image" style="background-image: url('/Focus-Cookie-Final/about/WhatsApp\ Image\ 2024-10-26\ at\ 11.19.52_23ed1d3f.jpg');"></div>
+            <div class="card-text">Ved</div>
+        </div>
+        <div class="card card2">
+            <div class="image" style="background-image: url('/Focus-Cookie-Final/about/WhatsApp\ Image\ 2024-10-26\ at\ 11.19.52_ed1b8b22.jpg');"></div>
+            <div class="card-text">Naman</div>
+        </div>
+        <div class="card card3">
+            <div class="image" style="background-image: url('/Focus-Cookie-Final/about/WhatsApp\ Image\ 2024-10-26\ at\ 11.19.53_58fe8a7e.jpg');"></div>
+            <div class="card-text">Anurag</div>
+        </div>
+        <div class="card card4">
+            <div class="image" style="background-image: url('/Focus-Cookie-Final/about/WhatsApp\ Image\ 2024-10-26\ at\ 11.19.53_d2082f27.jpg');"></div>
+            <div class="card-text">Amandeep</div>
+        </div>
+    </div>
+    <div class="text">
+        <h1 class="about">About Us</h1>
+        <p class="about">Are you excited to know who cares for you this much?</p>
+    </div>
+
+    <script>
+        const container = document.querySelector('.container');
+        const cards = document.querySelectorAll('.card');
+        const textDiv = document.querySelector('.text');
+        let rowArranged = false;
+
+        container.addEventListener('click', () => {
+            if (!rowArranged) {
+                // Start rotating the cards
+                cards.forEach(card => {
+                    card.classList.add('animate');
+                });
+
+                // Fade out the text div
+                textDiv.classList.add('fade-out');
+
+                // After the animation completes, rearrange cards in a row
+                setTimeout(() => {
+                    cards.forEach(card => {
+                        card.classList.remove('animate');
+                        card.classList.add('row-layout');  // Apply row layout class
+                    });
+                    rowArranged = true; // Allow the next click to trigger the image animation
+                }, 2500);  // Time after which cards should rearrange (2s for animation + buffer)
+            }
+        });
+
+        // Add click event for individual cards after rearranging them
+        cards.forEach(card => {
+            card.addEventListener('click', () => {
+                if (rowArranged) { // Ensure this happens only after the cards are in a row
+                    const image = card.querySelector('.image');
+                    image.classList.toggle('fixed'); // Ensure the image stays fixed in top left
+                    card.classList.toggle('clicked');
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
