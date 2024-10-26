@@ -1,4 +1,4 @@
-let cookie = document.getElementById("cookie");
+        let cookie = document.getElementById("cookie");
         let cookie2 = document.getElementById("cookie2");
         let cookie3 = document.getElementById("cookie3");
         let text = document.getElementById("text");
@@ -28,6 +28,8 @@ let cookie = document.getElementById("cookie");
         }
 
         cookie.addEventListener("click", scroll)
+        cookie2.addEventListener("click", scroll)
+        cookie3.addEventListener("click", scroll)
 
         // TEXT FADE IN EFFECT
         window.addEventListener("scroll", function () {
