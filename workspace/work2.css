@@ -1,0 +1,138 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url(bgg1.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+.button-container {
+display: flex;
+background-color: rgba(213, 153, 73);
+width: 250px;
+height: 40px;
+align-items: center;
+justify-content: space-around;
+border-radius: 10px;
+box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px,
+rgba(255, 129, 66, 0.5) 5px 10px 15px;
+transition: all 0.5s;
+position: absolute;
+left: 3vw;
+top: 3vh;
+}
+.button-container:hover {
+width: 32vw;
+transition: all 0.5s;
+}
+
+.button {
+outline: 0 !important;
+border: 0 !important;
+width: 50vw;
+height: 50vh;
+border-radius: 50%;
+background-color: transparent;
+display: flex;
+align-items: center;
+justify-content: center;
+color: #fff;
+transition: all ease-in-out 0.3s;
+cursor: pointer;
+}
+
+.button:hover {
+transform: translateY(-3px);
+}
+
+.icon {
+font-size: 20px;
+}
+
+/* .kala3{
+position: absolute;
+top: 0;
+left: 0;
+height: 100vh;
+width: 100vw;
+background-color: rgba(0, 0, 0, 0.5);
+z-index: -11;
+filter:blur(5px)
+} */
+
+.button-container1 {
+display: flex;
+background-color: rgb(213, 153, 73);
+width: 40px;
+height: 350px;
+align-items: center;
+justify-content: space-between;
+border-radius: 10px;
+box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px,
+rgba(255, 129, 66, 0.5) 5px 10px 15px;
+transition: all 0.5s;
+flex-direction: column;
+position: absolute;
+left: 95vw;
+top: 21%;
+}
+
+.button1{
+outline: 0 !important;
+border: 0 !important;
+width: 5vw;
+height: 50vh;
+border-radius: 50%;
+background-color: transparent;
+display: flex;
+align-items: center;
+justify-content: center;
+color: #fff;
+transition: all ease-in-out 0.3s;
+cursor: pointer;
+
+}
+.button1:hover {
+transform: translateY(-3px);
+}
+
+/* .button-container1:hover {
+height: 30vw;
+transition: all 0.5s;
+} */
+
+.spaceBar{
+position: absolute;
+left: 35vw;
+top: 2vh;
+background-color: rgb(213, 153, 73);
+padding: 10px 5px;
+border-radius: 10px;
+color: rgb(255, 236, 198);
+text-align: center;
+font-size: 12px;
+font-family: monospace;
+box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px,
+rgba(255, 129, 66, 0.5) 5px 10px 15px;
+display: flex;
+justify-content: space-around;
+flex-direction: column;
+gap: 20px;
+}
+
+.tryagain{
+border: none;
+border-bottom: solid 2px black;
+border-right: solid 2px black;
+border-radius: 5px;
+background-color: rgb(255, 236, 198);
+outline: none;
+text-align: center;
+font-family: monospace;
+font-size: 20px;
+}
