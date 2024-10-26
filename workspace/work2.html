@@ -102,7 +102,7 @@
             padding: 10px;
             border: 2px solid #333;
             border-radius: 5px;
-            background-color: #f0f0f0;
+            background-color:#D59949;
             position: absolute;
             top: 100px;
             left: 100px;
@@ -110,12 +110,18 @@
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
             cursor: move;
         }
-        #calculator input {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 10px;
-            font-size: 16px;
-        }
+       
+#calculator input {
+    width: 100%;
+    border: 0;
+    border-right: black 3px solid;
+    border-bottom: 3px black solid;
+    border-style: outset;
+    background: #FFECC6;
+    padding: 10px;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
         #calculator .buttons {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
@@ -125,7 +131,7 @@
             padding: 10px;
             font-size: 16px;
             border: none;
-            background-color: #ddd;
+            background-color:#FFECC6;
             border-radius: 5px;
             cursor: pointer;
         }
@@ -144,16 +150,16 @@
             <button onclick="appendToCalc('4')">4</button>
             <button onclick="appendToCalc('5')">5</button>
             <button onclick="appendToCalc('6')">6</button>
-            <button onclick="appendToCalc('')"></button>
+            <button onclick="appendToCalc('*')">x</button>
             <button onclick="appendToCalc('1')">1</button>
             <button onclick="appendToCalc('2')">2</button>
             <button onclick="appendToCalc('3')">3</button>
             <button onclick="appendToCalc('-')">-</button>
             <button onclick="appendToCalc('0')">0</button>
             <button onclick="appendToCalc('.')">.</button>
-            <button onclick="calculate()">=</button>
-            <button onclick="appendToCalc('+')">+</button>
             <button onclick="clearAll()">C</button>
+            <button onclick="appendToCalc('+')">+</button>
+            <button onclick="calculate()">=</button>
         </div>
     </div>
 

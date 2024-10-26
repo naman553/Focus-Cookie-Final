@@ -16,7 +16,10 @@
     
     font-style: normal; 
       }
-    
+    body{
+      scroll-behavior: smooth;
+      background-color: #433A2C;
+    }
 .navbar{
     display: flex;
     justify-content: space-between;
@@ -25,7 +28,7 @@
     position: fixed;
     height: 15vh;
     width: 100vw;
-    background: #433a2c;
+    /* background: #433a2c; */
     /* background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(32,32,32,1) 33%, rgba(59,59,59,1) 72%, rgba(116,116,116,1) 100%); */
     color: white;
     z-index: 1000;
@@ -42,10 +45,9 @@
     color: black;
     color: white;
 }
-.sub-section-1{
-    background: url(bg.jpg);
-    height: 100vh;
-    
+.sub-section-2{
+        background-color: #433A2C;
+  height: 100vh;
 }
 .nav-icon{
     display: none;
@@ -188,34 +190,29 @@ body {
   text-align: center;
   font-size: 2rem;
   position:relative;
-  background-image: linear-gradient(to right, #d06325, #b18120, #464e17);
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-style: bold;
+  color: #433A2C;
+  
   
   padding-bottom:8px;
 }
 
 .fea2{
   text-align: center;
-  font-style: bold;
   font-size: 2rem;
   position:relative;
-  background-image: linear-gradient(to right, #000000, #3543b5, #373d6c);
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: #433A2C;
+ 
   
   padding-bottom:8px;
 }
 
 .fea3{
   text-align: center;
-  font-style: bold;
+
   font-size: 2rem;
   position:relative;
-  background-image: linear-gradient(to right, #ff0000, #30a60e, #22c641);
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: #433A2C;
+
   
   padding-bottom:8px;
   
@@ -223,12 +220,11 @@ body {
 
 .fea4{
   text-align: center;
-  font-style: bold;
+  
   font-size: 2rem;
   position:relative;
-  background-image: linear-gradient(to right, #032758, #10538f, #7ea7d0);
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: #433A2C;
+  
   
   padding-bottom:8px;
 }
@@ -281,7 +277,7 @@ body {
 }
 
 
-@media (max-width: 768px) {
+@media (max-width: 860px) {
     .nav-links{
         display: none;
     }
@@ -302,6 +298,14 @@ body {
         height: 20px;
         left: 0;
     }
+    .parent{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 50px;
+        scale: 0.6;
+    }
+    
     
 }
 .logo{
@@ -313,3 +317,29 @@ body {
 .black{
   border-top: 4px solid black;
 }
+@media (min-width: 860px) {
+  .sub-section-1{
+    background: url(bg.jpg);
+    height: 100vh;
+    
+}
+  }
+  @keyframes appear{
+    from{
+        scale:0;
+        opacity: 0;
+        background-color: #433A2C;
+      }
+      to{
+        opacity: 1;
+        scale: 1;
+        background-color: #433A2C;
+        ;
+      }
+  }
+  .sub-section-2{
+    background-color: #433A2C;
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0;
+  }
