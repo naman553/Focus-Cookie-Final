@@ -21,7 +21,7 @@
 
         .container {
             position: absolute;
-            top: 30vh;
+            top: 50vh;
             left: 20vw;
         }
 
@@ -30,7 +30,7 @@
             width: 100vw;
             background: #000;
             opacity: 0.6;
-            z-index: 1;
+            z-index: -10000000000;
         }
 
         .card {
@@ -117,7 +117,7 @@
             left: 50vw;
             backdrop-filter: blur(5px);
             font-size: 36px;
-            padding-top: 250px;
+            padding-top: 430px;
             padding-bottom: 100%;
             text-align: center;
             color: rgb(255, 255, 255);
@@ -185,11 +185,57 @@
         .card:hover{
             opacity: 1;
         }
+        .navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+        position: fixed;
+    height: 15vh;
+    width: 100vw;
+    /* background: #433a2c; */
+    /* background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(32,32,32,1) 33%, rgba(59,59,59,1) 72%, rgba(116,116,116,1) 100%); */
+    color: white;
+    z-index: 1000;
+    background-color: #433A2C;
+}
+.nav-links{
+    display: flex;
+    gap: 35px;
+    justify-content: space-around;
+    list-style: none;
+}
+.navigation{
+    font-size: 38px;
+    text-decoration: none;
+    color: black;
+    color: white;
+}
+.logo{
+    top:5px;
+    position: relative;
+    width: 35%;
+}
     </style>
 </head>
 
 <body>
-    <div class="bg">
+
+    
+    <header class="header">
+        <nav class="navbar">
+            <div class="logo"><img src="/Focus-Cookie-Final/home/9e1813b7-7352-459f-8487-ddab8912596c_20241026_142447_0000.png" alt="Focus Cookie" class="logo"></div>
+           
+            <ul class="nav-links">
+                
+                <li><a href="/Focus-Cookie-Final/Main/Main.html" class="navigation">Home</a></li>
+                <li><a href="/Focus-Cookie-Final/about/about.html" class="navigation">About</a></li>
+                <li><a href="/Focus-Cookie-Final/workspace/work2.html" class="navigation">Workspace</a></li>
+                <li><a href="/Focus-Cookie-Final/Contact/contact-us.html" class="navigation">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="bg">        
     </div>
     <div class="container" id="cardContainer">
         <div class="card card1">
