@@ -229,6 +229,17 @@ body {
   padding-bottom:8px;
 }
 
+.fea5{
+  text-align: center;
+  
+  font-size: 2rem;
+  position:relative;
+  color: #433A2C;
+  
+  
+  padding-bottom:8px;
+}
+
 .kala{
     height: 100vh;
     width: 100vw;
@@ -261,7 +272,11 @@ body {
 
 .fea4:hover{
     
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);}
+
+    .fea5:hover{
+    
+      text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
     
     
 }
