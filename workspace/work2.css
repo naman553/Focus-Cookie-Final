@@ -14,7 +14,7 @@
 }
 
 body{
-    background-image: url(bgg1.webp);
+    background-image: url(/Focus-Cookie-Final/workspace/bgg1.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -264,3 +264,179 @@ i {
 .fill{
     fill: white;
 }
+
+.music-player{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    flex-direction: column;
+    background-color: rgb(213, 153, 73);
+    padding: 10px 5px;
+    border-radius: 10px;
+    color: rgb(255, 236, 198);
+    font-family: monospace;
+    width: 250px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px,
+    rgba(255, 129, 66, 0.5) 5px 10px 15px;
+    cursor: grab;
+
+}
+
+.music-player button{
+    background-color: rgb(213, 153, 73);
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    cursor: pointer;
+    color:rgb(255, 236, 198);
+    
+}
+
+#audio{
+    background-color: rgb(213, 153, 73);
+    border-radius: 50px;
+}
+
+audio::-webkit-media-controls-play-button,
+     audio::-webkit-media-controls-panel {
+     background-color: rgb(255, 236, 198);
+     color: #000;
+     }
+
+
+#playlist{
+    display: flex;
+    gap: 10px;
+    color: rgb(213, 153, 73);
+    font-family: monospace;
+    font-size: 20px;
+    background-color: rgb(255, 236, 198);
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px,
+    rgba(255, 129, 66, 0.5) 5px 10px 15px;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+
+
+
+.todo-container {
+    background-color: #D59949;
+    padding: 20px;
+    width: 200px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transform: translate(-50%, -50%);
+  
+    transform: translate(-50%, -50%);
+    color: #FFECC6;
+    visibility: hidden; /* Initial state hidden */
+  }
+  .delete-btn {
+    background-color: #D59949;
+  }
+  .delete-btn:hover {
+    background-color: #ca9045;
+  }
+  #taskIn {
+    width: calc(100% - 80px);
+    position: relative;
+    top: 10px;
+    left: 8px;
+    padding: 10px;  
+    margin-right: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #FFECC6;
+  }
+  h2 {
+    font-family: monospace;
+    color: #FFECC6;
+    font-weight: 800;
+    font-size: 25px;
+    cursor: move;
+  }
+  button.task {
+    margin: 10px;
+    position: relative;
+    top: 15px;
+    padding: 10px;
+    background-color: #FFECC6;
+    color: #D59949;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  button.task:hover {
+    background-color: #ffe2a9;
+  }
+  .taskList {
+    list-style-type: none;
+    padding: 0;
+  }
+  .task-item {
+    background-color: #FFECC6;
+    font-family: monospace;
+    font-size: 16px;
+    margin-top: 20px;
+    padding: 8px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #ddd;
+    color: #D59949;
+    display: flex;
+    gap: 15px;
+    border-radius: 5px;
+  }
+
+  p.tsk{
+    background-color: #FFECC6;
+  }
+  .tsk {
+    font-family: monospace;
+    background-color: #D59949;
+  }
+
+  #closeBreakMessage{
+    background-color: #FFECC6;
+    color: #D59949;
+    width:280px;
+  }
+
+  #breakMessage{
+    background-color: rgb(213, 153, 73);
+    color: #FFECC6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    height: 210px;
+    gap: 10px;
+    flex-direction: column;
+  }
+
+  #taskInput{
+    background-color:rgb(255, 236, 198);
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+  }

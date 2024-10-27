@@ -91,6 +91,16 @@
                 <path d="M15.6982 5.33428C15.6982 4.65455 16.2579 4.10352 16.9482 4.10352C17.6386 4.10352 18.1982 4.65455 18.1982 5.33428C18.1982 5.5793 18.1255 5.80759 18.0002 5.99939C17.6824 6.48571 17.1439 6.95283 16.9903 7.5M17 9.5H17.009M22 7C22 9.76142 19.7614 12 17 12C14.2386 12 12 9.76142 12 7C12 4.23858 14.2386 2 17 2C19.7614 2 22 4.23858 22 7Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
             </svg>
         </button>
+        <button class="button1">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="rgb(255, 236, 198)" fill="none" id="todo">
+                <path d="M8 5L20 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+                <path d="M4 5H4.00898" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M4 12H4.00898" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M4 19H4.00898" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M8 12L20 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                <path d="M8 19L20 19" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+ </button>
       </div>
 
     <div class="spaceBar" id="activity" style="visibility: hidden;">
@@ -191,232 +201,41 @@
     </div>
 
     
-    <script>
-document.getElementById("svg").addEventListener("click", function() {
-    var activity = document.getElementById("activity");
-    if (activity.style.visibility === "visible") {
-        activity.style.visibility = "hidden";
-    } else {
-        activity.style.visibility = "visible";
-    }
-});
-        
-            var hits = 0 ;
-    var hitElement = document.querySelector( '.hits' );
-    document.body.onkeyup = function(e) {
-    if( e.keyCode == 32 ) {
-        addHit();
-    } 
-    }
-
-    var addHit = function() {
-    hits++;
-    renderHits();
-    }
-
-    var renderHits = function() {
-    hitElement.innerHTML = hits;
-    }
-
-    var resetHits = function() {
-    hits = 0;
-    renderHits();
-    }
-
-   
-
     
-        document.getElementById("toggle").addEventListener("click", function() {
-            var calculator = document.getElementById("calculator");
-            calculator.style.display = calculator.style.display === "none" ? "block" : "none";
-        });
+    <div class="music-player" id="music-player" style="visibility: hidden;">
+        <audio id="audio" controls preload="none" muted></audio>
+        <div class="controls">
+            <button id="prev"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="rgb(255, 236, 198" fill="none">
+                <path d="M11.5 18C11.5 18 5.50001 13.5811 5.5 12C5.49999 10.4188 11.5 6 11.5 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M18.5 18C18.5 18 12.5 13.5811 12.5 12C12.5 10.4188 18.5 6 18.5 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            </svg></button>
+            <button id="play-pause"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="rgb(255, 236, 198" fill="none">
+                <path d="M18.8906 12.846C18.5371 14.189 16.8667 15.138 13.5257 17.0361C10.296 18.8709 8.6812 19.7884 7.37983 19.4196C6.8418 19.2671 6.35159 18.9776 5.95624 18.5787C5 17.6139 5 15.7426 5 12C5 8.2574 5 6.3861 5.95624 5.42132C6.35159 5.02245 6.8418 4.73288 7.37983 4.58042C8.6812 4.21165 10.296 5.12907 13.5257 6.96393C16.8667 8.86197 18.5371 9.811 18.8906 11.154C19.0365 11.7084 19.0365 12.2916 18.8906 12.846Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" />
+            </svg></button>
+            <button id="next"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="rgb(255, 236, 198" fill="none">
+                <path d="M12.5 18C12.5 18 18.5 13.5811 18.5 12C18.5 10.4188 12.5 6 12.5 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M5.50005 18C5.50005 18 11.5 13.5811 11.5 12C11.5 10.4188 5.5 6 5.5 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            </svg></button>
+            
+        </div>
+        <ul id="playlist">
+            <li data-song="Alpha.mp3" class="lis alph">Alpha</li>
+            <li data-song="Gamma.mp3" class="lis gamm">Gamma</li>
+            <li data-song="blueSky.mp3" class="lis beta">Beta</li>
+        </ul>
+    </div>
 
-        var calc = document.getElementById("calculator");
-        var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+    <div class="todo-container" id="todo-container1">
+        <h2 id="drag-header">To-Do List</h2>
+        <input type="text" id="taskInput" placeholder="Add a new task...">
+        <button onclick="addTask()" class="task"><p class="tsk">Add Task</p></button>
+        <ul id="taskList"></ul>
+      </div>
 
-        calc.addEventListener("mousedown", function(e) {
-            e.preventDefault();
-            pos3 = e.clientX;
-            pos4 = e.clientY;
-            document.addEventListener("mousemove", elementDrag);
-            document.addEventListener("mouseup", closeDragElement);
-        });
-
-        function elementDrag(e) {
-            e.preventDefault();
-            pos1 = pos3 - e.clientX;
-            pos2 = pos4 - e.clientY;
-            pos3 = e.clientX;
-            pos4 = e.clientY;
-            calc.style.top = (calc.offsetTop - pos2) + "px";
-            calc.style.left = (calc.offsetLeft - pos1) + "px";
-        }
-
-        function closeDragElement() {
-            document.removeEventListener("mousemove", elementDrag);
-            document.removeEventListener("mouseup", closeDragElement);
-        }
-
-        function appendToCalc(value) {
-            document.getElementById('calcinput').value += value;
-        }
-
-        function calculate() {
-            try {
-                document.getElementById('calcinput').value = eval(document.getElementById('calcinput').value);
-            } catch {
-                document.getElementById('calcinput').value = "Error";
-            }
-        }
-        function clearAll() {
-        var calcinput = document.getElementById("calcinput");
-        calcinput.value = "";
-        }
+      <div id="celebrate">
+        <audio id="audio1" src="rightanswer.mp3"></audio>
+</div>
     
-
-let workTittle = document.getElementById('work');
-let breakTittle = document.getElementById('break');
-
-let workTime = 1;
-let breakTime = 5;
-
-let seconds = "00"
-
-// display
-window.onload = () => {
-    document.getElementById('minutes').innerHTML = workTime;
-    document.getElementById('seconds').innerHTML = seconds;
-
-    workTittle.classList.add('active');
-}
-
-// start timer
-function start() {
-    // change button
-    document.getElementById('start').style.display = "none";
-    document.getElementById('reset').style.display = "block";
-
-    // change the time
-    seconds = 59;
-
-    let workMinutes = workTime - 1;
-    let breakMinutes = breakTime - 1;
-
-    breakCount = 0;
-
-    // countdown
-    let timerFunction = () => {
-        //change the display
-        document.getElementById('minutes').innerHTML = workMinutes;
-        document.getElementById('seconds').innerHTML = seconds;
-
-        // start
-        seconds = seconds - 1;
-
-        if(seconds === 0) {
-            workMinutes = workMinutes - 1;
-            if(workMinutes === -1 ){
-                if(breakCount % 2 === 0) {
-                    // start break
-                    workMinutes = breakMinutes;
-                    breakCount++
-
-                    // change the painel
-                    workTittle.classList.remove('active');
-                    breakTittle.classList.add('active');
-                }else {
-                    // continue work
-                    workMinutes = workTime;
-                    breakCount++
-
-                    // change the painel
-                    breakTittle.classList.remove('active');
-                    workTittle.classList.add('active');
-                }
-            }
-            seconds = 59;
-        }
-    }
-
-    // start countdown
-    setInterval(timerFunction, 1000); // 1000 = 1s
-}
-document.getElementById("toggle1").addEventListener("click", function() {
-    var container1 = document.querySelector(".container1");
-    if (container1.style.visibility === "hidden") {
-        container1.style.visibility = "visible";
-    } else {
-        container1.style.visibility = "hidden";
-    }
-});
-
-
-
-document.getElementById("toggle1").addEventListener("click", function() {
-    var work = document.getElementById("work");
-    if (work.style.visibility === "hidden") {
-        work.style.visibility = "visible";
-    } else {
-        work.style.visibility = "hidden";
-    }
-});
-
-
-    document.getElementById("activity").addEventListener("mousedown", function(e) {
-        e.preventDefault();
-        var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
-        pos3 = e.clientX;
-        pos4 = e.clientY;
-        
-        document.addEventListener("mousemove", dragElement);
-        document.addEventListener("mouseup", closeDragElement);
-
-        function dragElement(e) {
-            e.preventDefault();
-            pos1 = pos3 - e.clientX;
-            pos2 = pos4 - e.clientY;
-            pos3 = e.clientX;
-            pos4 = e.clientY;
-            var element = document.getElementById("activity");
-            element.style.top = (element.offsetTop - pos2) + "px";
-            element.style.left = (element.offsetLeft - pos1) + "px";
-        }
-
-        function closeDragElement() {
-            document.removeEventListener("mouseup", closeDragElement);
-            document.removeEventListener("mousemove", dragElement);
-        }
-    });
-    document.getElementById("svg").addEventListener("click", function() {
-        var work = document.getElementById("work");
-        if (work.style.visibility === "hidden") {
-            work.style.visibility = "visible";
-        } else {
-            work.style.visibility = "hidden";
-        }
-    });
-
-    let tool = document.getElementById('toggle')
-        let timer = document.getElementById('toggle1')
-        let music = document.getElementById('music')
-        let counter = document.getElementById('svg')
-
-        tool.addEventListener("click",function(){
-            document.getElementById('toggle').classList.toggle('fill')
-        }
-        )
-        timer.addEventListener("click",function(){
-            document.getElementById('toggle1').classList.toggle('fill')
-        }
-        )
-        music.addEventListener("click",function(){
-            document.getElementById('music').classList.toggle('fill')
-        }
-        )
-        counter.addEventListener("click",function(){
-            document.getElementById('svg').classList.toggle('fill')
-        }
-        )
-    </script>
+<script src="/Focus-Cookie-Final/workspace/work2.js"></script>
 </body>
 </html>
