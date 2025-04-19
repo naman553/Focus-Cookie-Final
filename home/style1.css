@@ -168,7 +168,7 @@ body {
 
 /* When clicked */
 .open {
-  width: 25vw;
+  width: 18vw;
   height: 20rem;
   background-size: cover;
   background-position: center;
@@ -214,9 +214,18 @@ body {
   color: #433A2C;
 
   
-  padding-bottom:8px;
+  padding-bottom:8px;}
   
-}
+  .fea5{
+    text-align: center;
+  
+    font-size: 2rem;
+    position:relative;
+    color: #433A2C;
+  
+    
+    padding-bottom:8px;}
+
 
 .fea4{
   text-align: center;
